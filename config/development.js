@@ -41,10 +41,11 @@ function init(){
 
 if(isProd)
 {
+    // server()
     webpack([webpackCommon]).run((err, stats) => {
         console.log('error message ',err, '\n stats message',stats)
     })
-    server()
+
 }
 else {
     init()

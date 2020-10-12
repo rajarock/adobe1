@@ -1,0 +1,38 @@
+.cart-item-image {
+    width: 5rem;
+    height: 5rem;
+}
+.cart-items-incrementor {
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(#fff,#f9f9f9);
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding-top: 1px;
+    line-height: 1;
+}
+.cart-item-price-container {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+}
+.cart-item-actual {
+    text-decoration: line-through;
+    color: #878787;
+    padding: 0 5px;
+}
+.cart-item-discount{
+    color:#388e3c;
+    span {
+        font-weight: 900;
+    }
+}
+.cart-item-count {
+    width: 35px;
+    padding: 0 5px;
+    margin: 0 5px;
+    text-align: center;
+}

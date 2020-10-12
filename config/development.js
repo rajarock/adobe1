@@ -1,9 +1,9 @@
 // import path from 'path'
 const path = require('path')
 const webpack = require('webpack')
-import webpackDevServer from 'webpack-dev-server'
-import webpackCommon from './webpack-common'
-import webpackDev from './webpack-dev'
+const webpackDevServer = require('webpack-dev-server')
+const webpackCommon = require('./webpack-common')
+const webpackDev = require('./webpack-dev')
 
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'

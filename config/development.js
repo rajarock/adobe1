@@ -25,10 +25,10 @@ function init(){
 
 if(isProd)
 {
-    // webpack([webpackCommon]).run((err, stats) => {
-    //     console.log('error message ',err, '\n stats message',stats)
-    // })
-    init()
+    webpack([webpackCommon]).run((err, stats) => {
+        console.log('error message ',err, '\n stats message',stats)
+    })
+    // init()
 
 }
 else {

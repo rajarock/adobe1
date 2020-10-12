@@ -11,5 +11,4 @@ app.use(express.static(__dirname));
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
 });
-console.log(port,app)
 app.listen(port,() => console.log('app is listiong to', port));

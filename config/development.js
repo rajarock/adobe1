@@ -9,9 +9,10 @@ const express = require('express');
 const favicon = require('express-favicon');
 
 const port = process.env.PORT || 8080;
-const app = express();
+
 
 function server() {
+    const app = express();
     app.use(favicon(__dirname + '/public/favicon.png'));
     // the __dirname is the current directory from where the script is running
     app.use(express.static(__dirname));

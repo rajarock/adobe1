@@ -2,12 +2,13 @@
     "name": "adobe-1.0.0",
     "version": "1.0.0",
     "description": "created for code adobe cart assignment",
-    "private": false,
+    "private": true,
+    "main": "index.js",
     "engines": {
         "node": "10.x"
     },
     "scripts": {
-        "start": "node config/server.js",
+        "start": "webpack -p --config config/webpack-common.js",
         "build": "node config/main.js",
         "dev": "node config/main.js",
         "compile": "node config/main.js"

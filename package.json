@@ -8,7 +8,7 @@
       },
     "scripts": {
         "start": "node config/main.js",
-        "build": "NODE_ENV=production PORT=5000 node config/main.js",
+        "build": "node config/main.js",
         "dev": "node config/main.js",
         "compile": "node config/main.js"
     },

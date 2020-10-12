@@ -8,8 +8,8 @@ app.use(favicon(__dirname + '/public/favicon.png'));
 // the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
 // send the user to index html page inspite of the url
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build/index.html'));
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 console.log(port,app)
-app.listen(port);
+app.listen(port,() => console.log('app is listiong to', port));

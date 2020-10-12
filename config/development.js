@@ -1,6 +1,6 @@
 // import path from 'path'
 const path = require('path')
-import webpack from 'webpack'
+const webpack = require('webpack')
 import webpackDevServer from 'webpack-dev-server'
 import webpackCommon from './webpack-common'
 import webpackDev from './webpack-dev'

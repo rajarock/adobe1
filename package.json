@@ -2,12 +2,12 @@
     "name": "adobe-1.0.0",
     "version": "1.0.0",
     "description": "created for code adobe cart assignment",
-    "private": true,
+    "private": false,
     "engines": {
         "node": "10.x"
     },
     "scripts": {
-        "start": "node config/main.js",
+        "start": "node config/server.js",
         "build": "node config/main.js",
         "dev": "node config/main.js",
         "compile": "node config/main.js"
@@ -36,9 +36,7 @@
         "babel-plugin-module-resolver": "^3.2.0",
         "babel-plugin-webpack-alias": "^2.1.2",
         "css-loader": "^3.1.0",
-        "express": "^4.17.1",
         "express-favicon": "^2.0.1",
-        "file-loader": "^4.2.0",
         "html-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^0.8.0",
         "node-sass": "^4.12.0",

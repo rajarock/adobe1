@@ -9,7 +9,7 @@
     },
     "scripts": {
         "start": "webpack -p --config config/webpack-common.js",
-        "build": "node config/main.js",
+        "build": "webpack -p --config config/webpack-common.js",
         "dev": "node config/main.js",
         "compile": "node config/main.js"
     },

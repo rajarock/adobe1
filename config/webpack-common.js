@@ -63,7 +63,7 @@ module.exports = {
     name: 'web',
     target: 'web',
     mode: 'production',
-    devtool: 'source-map',
+    // devtool: 'source-map',
     entry : {
         main: './src/App/App.js',
     },

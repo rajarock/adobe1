@@ -8,7 +8,7 @@
         "node": "10.x"
     },
     "scripts": {
-        "start": "webpack -p --config config/webpack-common.js",
+        "start": "node server.js",
         "build": "webpack -p --config config/webpack-common.js",
         "dev": "node config/main.js",
         "compile": "node config/main.js"

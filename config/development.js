@@ -8,7 +8,7 @@ const webpackDev = require('./webpack-dev')
 const express = require('express');
 const favicon = require('express-favicon');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 const isProd = process.env.NODE_ENV === 'production'
 

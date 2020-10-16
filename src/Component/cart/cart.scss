@@ -1,79 +1,131 @@
-.shopping-items-container {
-    display: grid;
-    grid-auto-columns: minmax(15rem, auto);
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    grid-gap: 1rem;
-    width: 58%;
+.cart-header-container {
+    display: flex;
+    padding: 5px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    margin: 5px 9px;
 }
-.shopping-item {
-  border: 2px solid #e2e2e2;
-}
-.shopping-left-container {
-  position: relative;
-}
-.shopping-right-container {
-    padding: 10px 10px;
-    background-color: #e2e2e2;
+.cart-item-header {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    color: #878787;
 }
 
-.shopping-item-image {
-  width: 12rem;
-  height: 12rem;
-  padding: 1rem 2rem;
+.cart-qty-header {
+    padding-left: 5rem;
+    padding-right: 3rem;
 }
-.shopping-items-incrementor {
-  width: 2rem;
-  height: 2rem;
-  background: linear-gradient(#fff,#f9f9f9);
-  display: inline-block;
-  border: 1px solid #c2c2c2;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 50%;
-  padding-top: 1px;
-  line-height: 1;
+
+.cart-container{
+    float: left;
+    width: 30%;
 }
-.shopping-item-price-container {
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 700;
-  display: flex;
-  position: relative;
+.cart-items-container {
+    display: grid;
+    color: #878787;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e2e2;
+    margin: .5rem;
 }
-.shopping-item-name{
-    color: #222020;
+.cart-item-img {
+    width: 2rem;
+    height: 2rem;
+    float: left;
+    padding: 5px;
+}
+.cart-item-name {
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px 5px;
+
+}
+.cart-item-remove {
+    padding: 10px 5px;
+}
+.cart-items-row {
+    display: flex;
+    padding: 4px 0px;
+}
+.cart-items {
+    display: flex;
+    border: 1px solid #e2e2e2;
+    padding: 5px;
+}
+.cart-item-count {
+    width: 25px;
+    font-size: 14px;
+    height: 25px;
+    font-weight: 500;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    color: #878787;
+}
+.cart-qty-container {
+    padding: 10px;
+    line-height: 2rem;
+}
+.cart-item-price {
+    line-height: 2rem;
+    padding: 10px 0;
+    color: #878787;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 4rem;
+}
+.cart-items-incrementor {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(#fff,#f9f9f9);
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    color: #878787;
     font-size: 1rem;
+    border-radius: 50%;
+    padding-top: 1px;
+    line-height: 1;
 }
-.shopping-item-actual {
-  text-decoration: line-through;
-  text-decoration-style:solid;
-  text-decoration-color: red;
-  color: #878787;
-  padding: 0 5px;
-}
-.shopping-item-discount{
-  position: absolute;
-  top: 1rem;
-  left: 10px;
-  background: #388e3c;
-  color: #fff;
-  padding: 0 5px;
-  font-weight: 900;
-  line-height: 1.5rem;
-  height: 1.5rem;
-}
-.shopping-item-count {
-  width: 35px;
-  padding: 0 5px;
-  margin: 0 5px;
-  text-align: center;
-}
-.shopping-item-addtocart {
-    color:#3bb2c7;
-    border: 1px solid #3bb2c7;
-    border-radius: 4px;
-    line-height: 1rem;
-    position: absolute;
-    right: 2px;
-    font-size: .875rem;
-}
+
+ .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    transition: 0.3s;
+    line-height: 1.5rem;
+  }
+  .grid-item-left {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 1rem;
+    text-align: left;
+  }
+  .grid-item-separator {
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .grid-item-right {
+    padding: 5px;
+    font-size: 1rem;
+    text-align: right;
+  }
+  .cart-summary {
+      color: #878787;
+  }
+  .cart-summary-header{
+      font-size: 1rem;
+      padding-left: 10px;
+      padding-top: 5px;
+      font-weight: bold;
+  }
+  .cart-backgroundColor{
+  background-color:#e6e6e6;
+  }
+  .cart-summary {
+      border: 3px solid #e2e2e2;
+      margin: 15px;
+  }
+  

@@ -1,5 +1,5 @@
 import state from './Store'
-import Cart from './cart'
+import Cart from './Shopping'
 
 export default Cart
 export { state, Cart }

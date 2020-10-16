@@ -1,10 +1,10 @@
-import './cart.scss'
+import './Shopping.scss'
 import { items } from './fixture.json'
+import store from '../../Store'
 
-
-const renderItems = () => {
+const renderItems = (data) => {
     let retStr = ''
-     items.map(item => {
+    Object.values(data).forEach(item => {
         retStr += 
          `<div class="shopping-item">
             <div class="shopping-left-container">
@@ -17,7 +17,7 @@ const renderItems = () => {
                     <div class="shopping-item-price-container"> 
                         <div class="shopping-item-actual">$${item.price.actual}</div>
                         <div class="shopping-item-display"> $${item.price.display} </div>
-                        <button class="shopping-item-addtocart"> Add to cart </button>
+                        <button class="shopping-item-addtocart" identifier=${item.identifier}> Add to cart </button>
                     </div>
                 </div>
 
@@ -28,22 +28,20 @@ const renderItems = () => {
 
     return retStr;
      }
-const cartContainer = () => {
-    return ( `<div class="cart-item-container"></div>`)
-}
 
-//      <div class="cart-item-count-wrapper">
-//      <button class="cart-items-incrementor"> + </button>
-//      <input type="text" value="0" readonly class="cart-item-count"></input>
-//      <button class="cart-items-incrementor"> - </button>
-//  </div>
-//  <div class="cart-item-remove">REMOVE</div>
+     
+
 const Shopping = () => {
+    store.setShoppingData(items)
+    const data = store.shopping;
         return (
-        `<div>
-            <div class="shopping-items-container">
-                ${renderItems()}
+        `<div id="shopping-page">
+            <div class="shopping-container">
+                <div class="shopping-items-container">
+                ${renderItems(data)}
+                </div>
             </div>
+            <div id="cart-container-id" class="cart-empty-container"> Your Cart is Empty </div>
         </div>`
         )
     }

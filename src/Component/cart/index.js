@@ -63,7 +63,7 @@ const renderCartItems = (data = {}) => {
         return cartItemsStr;
 }
 
-const cartContainer = () => {
+const Cart = () => {
     const data = store.cartData;
     if(Object.keys(data).length > 0) {
 
@@ -87,4 +87,4 @@ const cartContainer = () => {
 
     
     
-export default cartContainer
+export default Cart

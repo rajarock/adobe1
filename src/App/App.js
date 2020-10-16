@@ -1,5 +1,5 @@
 import store from '../Store';
-import Shopping from '../Component';
+import { Cart, Shopping } from '../Component';
 // import Cart from '../Component/Cart'
 import './index.scss';
 
@@ -57,10 +57,10 @@ const cartEventHandler = () => {
     const removeEle = document.querySelectorAll('.cart-item-remove');
     removeEle.forEach(el => el.addEventListener('click', deleteHandler));
 }
-async function renderCart(){
-    const Cart = await import('../Component/Cart')
-    const cartDom = Cart.default()
-    // const cartDom = Cart()
+ function renderCart(){
+    // const Cart = await import('../Component/Cart')
+    // const cartDom = Cart.default()
+    const cartDom = Cart()
     const tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = cartDom;
     document.getElementById('cart-container-id').remove();

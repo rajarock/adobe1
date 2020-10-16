@@ -1,6 +1,6 @@
 import store from '../Store'
-import Shopping from '../Component/Shopping'
-import Cart from '../Component/Cart'
+import Shopping from '../Component/Shopping/index.js'
+import Cart from '../Component/Cart/index.js'
 import './index.scss'
 
 

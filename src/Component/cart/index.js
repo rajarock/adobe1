@@ -64,26 +64,25 @@ const renderCartItems = (data = {}) => {
 }
 
 const Cart = () => {
-    const data = store.cartData;
+    const data = store.cartData || {};
     if(Object.keys(data).length > 0) {
-
-    return (
-        `<div id="cart-container-id" class="cart-container">
-             <div class="cart-header-container"> 
-                <span class="cart-item-header"> items </span>
-                <span class="cart-qty-header"> Qty </span>
-                <span class="cart-price-header"> Price </span>
-            </div>
-            <div class="cart-items-container">
-                ${renderCartItems(data)}
-            </div>
-            ${renderCartTotal()}
-         </div>`)
+        return (
+            `<div id="cart-container-id" class="cart-container">
+                <div class="cart-header-container"> 
+                    <span class="cart-item-header"> items </span>
+                    <span class="cart-qty-header"> Qty </span>
+                    <span class="cart-price-header"> Price </span>
+                </div>
+                <div class="cart-items-container">
+                    ${renderCartItems(data)}
+                </div>
+                ${renderCartTotal()}
+            </div>`)
     }
     else {
         return (`<div id="cart-container-id" class="cart-empty-container"> Your Cart is Empty </div>`)
     }
-    }
+}
 
     
     

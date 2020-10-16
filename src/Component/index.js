@@ -1,5 +1,5 @@
-import Shopping from './Shopping'
-import Cart from './Cart'
+import Shopping from './Shopping';
+import Cart from './Cart';
 
-export default Cart
+export default Shopping
 export {  Cart, Shopping }

@@ -1,5 +1,6 @@
 import state from './Store'
-import Cart from './Shopping'
+import Shopping from './Shopping'
+import Cart from './Cart'
 
 export default Cart
-export { state, Cart }
+export { state, Cart, Shopping }

@@ -1,7 +1,7 @@
-import store from '../Store'
-import { Shopping, Cart } from '../Component'
+import store from '../Store';
+import { Shopping, Cart } from '../Component';
 // import Cart from '../Component/Cart'
-import './index.scss'
+import './index.scss';
 
 
 function renderApp() {

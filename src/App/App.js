@@ -1,6 +1,6 @@
 import store from '../Store'
 import Shopping from '../Component/Shopping/index.js'
-// import Cart from '../Component/Cart/index.js'
+import Cart from '../Component/Cart'
 import './index.scss'
 
 
@@ -58,8 +58,9 @@ const cartEventHandler = () => {
     removeEle.forEach(el => el.addEventListener('click', deleteHandler));
 }
 async function renderCart(){
-    const Cart = await import('../Component/Cart/index.js')
-    const cartDom = Cart.default()
+    // const Cart = await import('../Component/Cart')
+    // const cartDom = Cart.default()
+    const cartDom = Cart()
     const tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = cartDom;
     document.getElementById('cart-container-id').remove();

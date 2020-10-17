@@ -1,6 +1,6 @@
 import store from '../Store';
 import { Shopping } from '../Component';
-import Cart from '../Component/Cart'
+import Cart from '../Component/Cart';
 import './index.scss';
 
 

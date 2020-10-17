@@ -31,11 +31,13 @@ const renderItems = (data) => {
      
 
 const Shopping = (store) => {
+    let shopStr = ''
     const data = store.shopping;
-    const shopStr = `<div id="shopping-page">
+    let renderItemStr = renderItems(data);
+    shopStr = `<div id="shopping-page">
             <div class="shopping-container">
                 <div class="shopping-items-container">
-                ${renderItems(data)}
+                ${renderItemStr}
                 </div>
             </div>
             <div id="cart-container-id" class="cart-empty-container"> Your Cart is Empty </div>

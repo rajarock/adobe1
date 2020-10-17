@@ -6,7 +6,7 @@ import './index.scss';
 
 function renderApp() {
     store.setShoppingData(items);
-    const shopping =  Shopping(store)
+    const shopping =  Shopping(store);
     const tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = shopping;
     document.getElementById('app-root').appendChild(tempWrapper.firstChild);

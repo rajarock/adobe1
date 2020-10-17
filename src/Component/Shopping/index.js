@@ -111,7 +111,7 @@ const renderCartItems = (data = {}) => {
         return cartItemsStr;
 }
 
-const Cart = (store) => {
+const CartContainer = (store) => {
     const data = store.cartData || {};
     if(Object.keys(data).length > 0) {
         return (
@@ -135,4 +135,4 @@ const Cart = (store) => {
 // export default Cart
 
     export default Shopping
-    export { Cart }
+    export { CartContainer, Shopping }

@@ -1,5 +1,5 @@
 import store from '../Store';
-import { Shopping, Cart} from '../Component';
+import { Shopping, CartContainer} from '../Component';
 // import Cart from '../Component/Cart';
 import './index.scss';
 
@@ -62,7 +62,7 @@ function cartEventHandler() {
 document.addEventListener('renderCart', function (e) { 
     console.log('render cart')
     // renderCart()
-    var cartDom = Cart(store)
+    var cartDom = CartContainer(store);
     var tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = cartDom;
     document.getElementById('cart-container-id').remove();

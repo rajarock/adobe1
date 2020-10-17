@@ -1,6 +1,5 @@
 import store from '../Store';
 import { Shopping, CartContainer} from '../Component';
-// import Cart from '../Component/Cart';
 import './index.scss';
 
 

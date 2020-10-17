@@ -1,5 +1,5 @@
 import store from '../../Store'
-import './Cart.scss'
+import './style.scss'
 
 
 const renderCartTotal = () => {

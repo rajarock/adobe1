@@ -11,8 +11,8 @@ function renderApp() {
     const addtoCartBtns = document.querySelectorAll('.shopping-item-addtocart');
         addtoCartBtns.forEach(el => el.addEventListener('click', event => {
             const identifier = event.target.getAttribute('identifier');
-            store.subscribe(identifier)
-
+            const alreadyAdded = store.subscribe(identifier)
+            if(alreadyAdded) alert ('Already this item added to Cart');
             // Dispatch the event.
             if(typeof document !== 'undefined') {
                 let event = new Event("renderCart", {bubbles: true}); // (2)
@@ -39,6 +39,15 @@ function cartEventHandler() {
             var event = new Event("renderCart", {bubbles: true}); // (2)
             document.dispatchEvent(event); 
         }
+        const totalQty = store.getQtyCount();
+        document.getElementById('total-qty').innerText = totalQty;
+        const totalAmount = store.getTotalAmount()
+        const { actual, display } = totalAmount;
+        const discount = display - actual
+
+        document.getElementById('total-amount').innerText = `$${display}`;
+        document.getElementById('total-discount').innerText = `- $${discount}`;
+        document.getElementById('total-sum').innerText = `$${actual}`;
  
     }
 

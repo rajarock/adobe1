@@ -5,10 +5,16 @@
     display: grid;
     margin: auto auto;
     grid-template-columns: auto auto auto; 
-    span {
+    div {
         margin: auto auto;
         color: #878787;
     }
+}
+.cart-label {
+    margin: 1rem;
+    color: #1b1919;
+    font-size: 1.5rem;
+    display: inline-block;
 }
 .cart-item-header {
     width: 7rem;
@@ -123,5 +129,8 @@
     .cart-container {
         width: 30%;
         float: left;
+    }
+    .cart-label {
+        display: none;
     }
   }

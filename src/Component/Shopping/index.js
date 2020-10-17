@@ -31,18 +31,17 @@ const renderItems = (data) => {
      
 
 const Shopping = (store) => {
-
     const data = store.shopping;
-        return (
-        `<div id="shopping-page">
+    const shopStr = `<div id="shopping-page">
             <div class="shopping-container">
                 <div class="shopping-items-container">
                 ${renderItems(data)}
                 </div>
             </div>
             <div id="cart-container-id" class="cart-empty-container"> Your Cart is Empty </div>
-        </div>`
-        )
+        </div>`;
+        
+        return shopStr;
     }
     
     export default Shopping

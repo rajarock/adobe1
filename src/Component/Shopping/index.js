@@ -1,5 +1,5 @@
 import './Shopping.scss'
-// import './style.scss';
+import './style.scss';
 import { items } from './fixture.json'
 // import store from '../../Store'
 

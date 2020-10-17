@@ -1,4 +1,5 @@
-import { Shopping, CartContainer } from './Shopping';
+import { Shopping } from './Shopping';
+import { CartContainer } from './CartContainer';
 
 
 export default Shopping

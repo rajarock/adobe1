@@ -1,6 +1,5 @@
 import './style.scss';
 
-
 const renderCartTotal = () => {
     let cartTotalStr ='';
     cartTotalStr += `<div class="cart-summary">
@@ -62,10 +61,11 @@ const renderCartItems = (data = {}) => {
         return cartItemsStr;
 }
 
-const Cart = (store) => {
+const CartContainer = (store) => {
+    let cartStr = ''
     const data = store.cartData || {};
     if(Object.keys(data).length > 0) {
-        return (
+        cartStr +=
             `<div id="cart-container-id" class="cart-container">
                 <div class="cart-header-container"> 
                     <span class="cart-item-header"> items </span>
@@ -76,11 +76,12 @@ const Cart = (store) => {
                     ${renderCartItems(data)}
                 </div>
                 ${renderCartTotal()}
-            </div>`)
+            </div>`
     }
     else {
-        return (`<div id="cart-container-id" class="cart-empty-container"> Your Cart is Empty </div>`)
+        cartStr += `<div id="cart-container-id" class="cart-empty-container"> Your Cart is Empty </div>`
     }
+    return cartStr;
 }
 
-export default Cart
+export default CartContainer

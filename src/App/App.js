@@ -40,6 +40,7 @@ function cartEventHandler() {
             document.dispatchEvent(event); 
         }
         const totalQty = store.getQtyCount();
+        document.getElementById('total-header-qty').innerText = totalQty;
         document.getElementById('total-qty').innerText = totalQty;
         const totalAmount = store.getTotalAmount()
         const { actual, display } = totalAmount;

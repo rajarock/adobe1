@@ -74,7 +74,7 @@ const CartContainer = (store) => {
             `<div id="cart-container-id" class="cart-container">
                 <div class="cart-label"> Cart Items </div>
                 <div class="cart-header-container"> 
-                    <div class="cart-item-header"> Items(<span id="total-qty">${totalQty}</span>) </div>
+                    <div class="cart-item-header"> Items(<span id="total-header-qty">${totalQty}</span>) </div>
                     <div class="cart-qty-header"> Qty </div>
                     <div class="cart-price-header"> Price </div>
                 </div>

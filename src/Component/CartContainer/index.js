@@ -85,3 +85,4 @@ const CartContainer = (store) => {
 }
 
 export default CartContainer
+export { CartContainer }

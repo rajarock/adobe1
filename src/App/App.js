@@ -1,11 +1,10 @@
 import store from '../Store';
 import { Shopping, CartContainer} from '../Component';
-import { items } from './fixture.json';
+// import Cart from '../Component/Cart';
 import './index.scss';
 
 
 function renderApp() {
-    store.setShoppingData(items);
     const shopping =  Shopping(store);
     const tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = shopping;

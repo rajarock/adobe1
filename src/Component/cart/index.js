@@ -1,5 +1,4 @@
-import store from '../../Store'
-import './style.scss'
+import './style.scss';
 
 
 const renderCartTotal = () => {
@@ -63,7 +62,7 @@ const renderCartItems = (data = {}) => {
         return cartItemsStr;
 }
 
-const Cart = () => {
+const Cart = (store) => {
     const data = store.cartData || {};
     if(Object.keys(data).length > 0) {
         return (

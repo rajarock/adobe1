@@ -5,7 +5,7 @@ import './index.scss';
 
 
 function renderApp() {
-    const shopping =  Shopping()
+    const shopping =  Shopping(store)
     const tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = shopping;
     document.getElementById('app-root').appendChild(tempWrapper.firstChild);
@@ -60,7 +60,7 @@ const cartEventHandler = () => {
  function renderCart(){
     // const Cart = await import('../Component/Cart')
     // const cartDom = Cart.default()
-    const cartDom = Cart()
+    const cartDom = Cart(store)
     const tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = cartDom;
     document.getElementById('cart-container-id').remove();

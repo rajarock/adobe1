@@ -1,6 +1,6 @@
 import './Shopping.scss'
 import { items } from './fixture.json'
-import store from '../../Store'
+// import store from '../../Store'
 
 const renderItems = (data) => {
     let retStr = ''
@@ -31,7 +31,7 @@ const renderItems = (data) => {
 
      
 
-const Shopping = () => {
+const Shopping = (store) => {
     store.setShoppingData(items)
     const data = store.shopping;
         return (

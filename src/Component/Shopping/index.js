@@ -1,8 +1,8 @@
 import './Shopping.scss'
-import { items } from './fixture.json'
+
 
 const renderItems = (data) => {
-    let retStr = ''
+    let retStr = '';
     Object.values(data).forEach(item => {
         retStr += 
          `<div class="shopping-item">
@@ -31,7 +31,7 @@ const renderItems = (data) => {
      
 
 const Shopping = (store) => {
-    store.setShoppingData(items)
+
     const data = store.shopping;
         return (
         `<div id="shopping-page">

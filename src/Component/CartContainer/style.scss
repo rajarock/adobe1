@@ -46,7 +46,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    width: 8rem;
+    width: 4rem;
     margin: auto 0;
 }
 .cart-item-remove {
@@ -124,8 +124,11 @@
       border: 3px solid #e2e2e2;
       margin: 15px;
   }
+  .cart-empty-container {
+    display: none;
+}
 
-  @media only screen and (min-width: 1023px) {
+  @media only screen and (min-width: 1025px) {
     .cart-container {
         width: 30%;
         float: left;
@@ -133,4 +136,13 @@
     .cart-label {
         display: none;
     }
+    .cart-empty-container {
+        display: block;
+    }
   }
+  @media only screen and (min-width: 380px) { 
+    .cart-item-name {
+        width: 8rem;
+    }
+  }
+  

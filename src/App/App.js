@@ -23,11 +23,11 @@ function renderApp() {
 }
 
 
-const cartEventHandler = () => {
+function cartEventHandler() {
 
-    const eventHandler = (event) => {
-        const identifier = event.target.parentElement.getAttribute('identifier')
-        const cartItem = store.cartData[identifier];
+    function eventHandler(event) {
+        var identifier = event.target.parentElement.getAttribute('identifier')
+        var cartItem = store.cartData[identifier];
         if(event.target.className.includes('plus'))
         cartItem.qty += 1;
         else if(event.target.className.includes('minus'))
@@ -37,40 +37,38 @@ const cartEventHandler = () => {
         document.getElementById(identifier).value = cartItem.qty
         else {
             delete store.cartData[identifier];
-            let event = new Event("renderCart", {bubbles: true}); // (2)
+            var event = new Event("renderCart", {bubbles: true}); // (2)
             document.dispatchEvent(event); 
         }
  
     }
 
-    const incrementor = document.querySelectorAll(".cart-items-incrementor");
+    var incrementor = document.querySelectorAll(".cart-items-incrementor");
     incrementor.forEach(el => el.addEventListener('click', eventHandler));
 
 
-    const deleteHandler = (e) => {
-        const identifier = e.target.getAttribute('identifier')
+    function deleteHandler(e) {
+        var identifier = e.target.getAttribute('identifier')
         delete store.cartData[identifier];
-        let event = new Event("renderCart", {bubbles: true}); // (2)
+        var event = new Event("renderCart", {bubbles: true}); // (2)
         document.dispatchEvent(event);   
 
     }
-    const removeEle = document.querySelectorAll('.cart-item-remove');
+    var removeEle = document.querySelectorAll('.cart-item-remove');
     removeEle.forEach(el => el.addEventListener('click', deleteHandler));
 }
- function renderCart(){
-    // const Cart = await import('../Component/Cart')
-    // const cartDom = Cart.default()
-    const cartDom = Cart(store)
-    const tempWrapper = document.createElement('div');
+
+// Listen for the event.
+document.addEventListener('renderCart', function (e) { 
+    console.log('render cart')
+    // renderCart()
+    var cartDom = Cart(store)
+    var tempWrapper = document.createElement('div');
     tempWrapper.innerHTML = cartDom;
     document.getElementById('cart-container-id').remove();
     document.getElementById('shopping-page').appendChild(tempWrapper.firstChild);
     cartEventHandler();
-}
-// Listen for the event.
-document.addEventListener('renderCart', function (e) { 
-    console.log('render cart')
-    renderCart()
+
 }, false);
 
 

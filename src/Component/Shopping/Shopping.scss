@@ -1,6 +1,6 @@
 .shopping-container {
   display: block;
-  width: 70%;
+  width: 100%;
   height: auto;
   float: left;
 }
@@ -11,9 +11,14 @@
 }
 .shopping-items-container {
     display: grid;
-    grid-auto-columns: minmax(15rem, auto);
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-auto-columns: minmax(10rem, auto);
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     grid-gap: 1rem;
+}
+.shopping-items-name-price
+{
+  // height: 3rem;
+  position: relative;
 }
 .shopping-item {
   border: 2px solid #e2e2e2;
@@ -24,12 +29,13 @@
 .shopping-right-container {
     padding: 10px 10px;
     background-color: #e2e2e2;
+    line-height: 2rem;
 }
 
 .shopping-item-image {
-  width: 12rem;
-  height: 12rem;
-  padding: 1rem 2rem;
+  width: 8rem;
+  height: 8rem;
+  padding: 1rem 1rem;
 }
 .shopping-items-incrementor {
   width: 2rem;
@@ -45,7 +51,7 @@
 }
 .shopping-item-price-container {
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 2rem;
   font-weight: 700;
   display: flex;
   position: relative;
@@ -53,6 +59,8 @@
 .shopping-item-name{
     color: #222020;
     font-size: 1rem;
+    line-height: 2rem;
+    padding: 0 5px;
 }
 .shopping-item-actual {
   text-decoration: line-through;
@@ -64,7 +72,6 @@
 .shopping-item-discount{
   position: absolute;
   top: 1rem;
-  left: 10px;
   background: #388e3c;
   color: #fff;
   padding: 0 5px;
@@ -78,12 +85,45 @@
   margin: 0 5px;
   text-align: center;
 }
+
 .shopping-item-addtocart {
-    color:#3bb2c7;
-    border: 1px solid #3bb2c7;
-    border-radius: 4px;
+  color:#3bb2c7;
+  border: 1px solid #3bb2c7;
+  border-radius: 4px;
+  font-size: .875rem;
+  line-height: 2rem;
+}
+
+
+@media only screen and (min-width: 1023px) {
+    .shopping-item-addtocart {
+      color:#3bb2c7;
+      border: 1px solid #3bb2c7;
+      border-radius: 4px;
+      line-height: 1rem;
+      position: absolute;
+      right: 2px;
+      top: 7px;
+      font-size: .875rem;
+      line-height: 2rem;
+  }
+
+  .shopping-container {
+    width:69%;
+  }
+  .shopping-items-container {
+    grid-auto-columns: minmax(15rem, auto);
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+  
+  .shopping-item-price-container {
     line-height: 1rem;
-    position: absolute;
-    right: 2px;
-    font-size: .875rem;
+  }
+  
+  .shopping-item-image {
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem 2rem;
+  }
+
 }

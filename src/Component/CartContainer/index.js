@@ -52,7 +52,7 @@ const renderCartItems = (data = {}) => {
                 <div class="cart-items">
                     <img class="cart-item-img" src=${item.image}></img>
                     <div class="cart-item-name">${item.name}</div>
-                    <div class="cart-item-remove" identifier=${item.identifier}>X</div></div>`
+                    <img class="cart-item-remove" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4wNTQgMWwxMC41NDMgMTAuNjVtLjA1NC0xMC41OTZMMSAxMS41OTciIHN0cm9rZT0iIzQxNDE0MSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZmlsbD0ibm9uZSIvPjwvc3ZnPgo="identifier=${item.identifier}></img></div>`
             cartItemsStr += renderCartItemQty(item);
             cartItemsStr += renderCartItemPrice(item);
             cartItemsStr += '</div>'

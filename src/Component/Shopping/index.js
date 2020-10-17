@@ -16,8 +16,8 @@ const renderItems = (data) => {
                     <div class="shopping-item-price-container"> 
                         <div class="shopping-item-actual">$${item.price.actual}</div>
                         <div class="shopping-item-display"> $${item.price.display} </div>
-                        <button class="shopping-item-addtocart" identifier=${item.identifier}> Add to cart </button>
                     </div>
+                    <button class="shopping-item-addtocart" identifier=${item.identifier}> Add to cart </button>
                 </div>
 
             </div>

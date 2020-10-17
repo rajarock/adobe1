@@ -1,93 +1,83 @@
 .cart-header-container {
-    display: flex;
     padding: 5px;
     border-top: 1px solid #e2e2e2;
     border-bottom: 1px solid #e2e2e2;
-    margin: 5px 9px;
+    display: grid;
+    margin: auto auto;
+    grid-template-columns: auto auto auto; 
+    span {
+        margin: auto auto;
+        color: #878787;
+    }
 }
 .cart-item-header {
-    padding-right: 5rem;
-    padding-left: 5rem;
-    color: #878787;
+    width: 7rem;
 }
 
-.cart-qty-header {
-    padding-left: 5rem;
-    padding-right: 3rem;
-}
-
-.cart-container{
-    float: left;
-    width: 30%;
-}
 .cart-items-container {
-    display: grid;
     color: #878787;
     padding-bottom: 1rem;
     border-bottom: 1px solid #e2e2e2;
     margin: .5rem;
 }
+.cart-items-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 4px 4px;
+}
+.cart-items {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0px;
+    border: 1px solid #e2e2e2;
+}
 .cart-item-img {
     width: 2rem;
     height: 2rem;
-    float: left;
-    padding: 5px;
+    margin: 5px 5px;
 }
 .cart-item-name {
-    display: inline-block;
     text-overflow: ellipsis;
-    width: 8rem;
     white-space: nowrap;
     overflow: hidden;
-    padding: 10px 5px;
-
+    width: 8rem;
+    margin: auto 0;
 }
 .cart-item-remove {
-    padding: 10px 5px;
+    margin: auto 5px;
 }
-.cart-items-row {
-    display: flex;
-    padding: 4px 0px;
+.cart-qty-container {
+    margin: auto;
+    line-height: 2rem;
 }
-.cart-items {
-    display: flex;
-    border: 1px solid #e2e2e2;
-    padding: 5px;
-}
+
 .cart-item-count {
-    width: 25px;
+    width: 20px;
     font-size: 14px;
-    height: 25px;
+    height: 20px;
     font-weight: 500;
     border: 1px solid #e2e2e2;
     text-align: center;
     color: #878787;
 }
-.cart-qty-container {
-    padding: 10px;
-    line-height: 2rem;
-}
-.cart-item-price {
-    line-height: 2rem;
-    padding: 10px 0;
-    color: #878787;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 4rem;
-}
+
+
 .cart-items-incrementor {
-    width: 28px;
-    height: 28px;
+    width: 1.5rem;
+    height: 1.5rem;
     background: linear-gradient(#fff,#f9f9f9);
-    display: inline-block;
     border: 1px solid #c2c2c2;
     cursor: pointer;
     color: #878787;
-    font-size: 1rem;
+    font-size: 14px;
     border-radius: 50%;
     padding-top: 1px;
-    line-height: 1;
+}
+.cart-item-price {
+    color: #878787;
+    text-align: end;
+    margin: auto;
+    width: 4rem;
 }
 
  .grid-container {
@@ -128,4 +118,10 @@
       border: 3px solid #e2e2e2;
       margin: 15px;
   }
-  
+
+  @media only screen and (min-width: 1023px) {
+    .cart-container {
+        width: 30%;
+        float: left;
+    }
+  }
